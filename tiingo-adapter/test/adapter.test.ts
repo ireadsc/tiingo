@@ -12,19 +12,15 @@ describe('execute', () => {
     const requests = [
       {
         name: 'id not supplied',
-        testData: { data: { base: 'ETH', quote: 'USD' } },
+        testData: { data: { ticker: 'aapl' } },
       },
       {
-        name: 'base/quote',
-        testData: { id: jobID, data: { base: 'ETH', quote: 'USD' } },
+        name: 'ticker',
+        testData: { id: jobID, data: { ticker: 'aapl' } },
       },
       {
-        name: 'from/to',
-        testData: { id: jobID, data: { from: 'ETH', to: 'USD' } },
-      },
-      {
-        name: 'coin/market',
-        testData: { id: jobID, data: { coin: 'ETH', market: 'USD' } },
+        name: 'ticker & field',
+        testData: { id: jobID, data: { ticker: 'aapl', field: 'open' } },
       },
     ]
 
@@ -43,12 +39,8 @@ describe('execute', () => {
       { name: 'empty body', testData: {} },
       { name: 'empty data', testData: { data: {} } },
       {
-        name: 'base not supplied',
-        testData: { id: jobID, data: { quote: 'USD' } },
-      },
-      {
-        name: 'quote not supplied',
-        testData: { id: jobID, data: { base: 'ETH' } },
+        name: 'ticker not supplied',
+        testData: { id: jobID, data: { field: 'open' } },
       },
     ]
 
@@ -67,12 +59,12 @@ describe('execute', () => {
   context('error calls @integration', () => {
     const requests = [
       {
-        name: 'unknown base',
-        testData: { id: jobID, data: { base: 'not_real', quote: 'USD' } },
+        name: 'unknown ticker',
+        testData: { id: jobID, data: { ticker: 'not_real' } },
       },
       {
-        name: 'unknown quote',
-        testData: { id: jobID, data: { base: 'ETH', quote: 'not_real' } },
+        name: 'unknown field',
+        testData: { id: jobID, data: { ticker: 'aapl', field: 'not_real' } },
       },
     ]
 
