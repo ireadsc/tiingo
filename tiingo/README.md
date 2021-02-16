@@ -13,7 +13,7 @@ This adapter supports the following environment variables:
 
 ### EOD endpoint
 
-Gets the most recent End of Day price for a stock. [supported tickers](https://apimedia.tiingo.com/docs/tiingo/daily/supported_tickers.zip) (zip format) at Tiingo. Additional endpoint docs are also [available](https://apimedia.tiingo.com/docs/tiingo/daily/supported_tickers.zip).
+Gets the most recent End of Day price for a stock. [supported tickers](https://apimedia.tiingo.com/docs/tiingo/daily/supported_tickers.zip) (zip format) at Tiingo. Additional endpoint docs are also [available](https://api.tiingo.com/documentation/end-of-day).
 
 ## Output
 
